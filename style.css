@@ -1,0 +1,38 @@
+
+
+.column-container{
+  background: lightgrey;
+  border: 2px solid green;
+  margin-top: 50px;
+  height: 200px;
+}
+
+.column1of4, .column2of4, .column3of4, .column4of4{
+  background: grey;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px 10px 10px;
+  float: left;
+}
+
+.column1of4{
+  width: 650px;
+}
+
+.column2of4{
+  width: 350px;
+}
+
+.column3of4, .column4of4{
+  width: 150px;
+}
+
+.text-container{
+  margin-top: 20px;
+  padding: 5px 5px 5px 5px;
+  background: lightblue;
+}
+
+.gallery-div{
+  background: lightyellow;
+  margin-top: 30px;
+}
