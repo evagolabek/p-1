@@ -7,25 +7,23 @@
 .column1of3, .column2of3, .column3of3 {
   background: lightgrey;
   border: 2px solid black;
-  margin: 15px 0px 5px 0px;
+  margin: 25px 20px 5px 20px;
   padding: 10px 10px 10px 10px;
   float: left;
 }
 
-.column1of3{
-  width: 250px;
-  margin-left: 20px;
+.column1of3 > ul li {
+  width: 180px;
+  font-size: 20px;
+  list-style-type: none !important;
 }
 
 .column2of3{
   width: 420px;
-  margin-left: 30px;
 }
 
 .column3of3 {
   width: 420px;
-  margin-left: 30px;
-  margin-right: 20px;
 }
 
 .image{
