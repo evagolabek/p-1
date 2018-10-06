@@ -5,7 +5,6 @@
   height: 500px;
 }
 .column1of3, .column2of3, .column3of3 {
-  background: lightgrey;
   border: 2px solid black;
   margin: 25px 20px 5px 20px;
   padding: 10px 10px 10px 10px;
@@ -38,4 +37,10 @@
 
 #blog-div{
   margin-top: 20px;
+}
+
+.table {
+  color: black;
+  background: orange;
+  padding: 2px 2px 2px 2px;
 }
