@@ -13,7 +13,7 @@
   },
   {
     name: "T-catcher",
-    desciption: "thought_catcher",
+    desciption: "thoughts_catcher",
     deadline: 2077
   }
 ]
