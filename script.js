@@ -61,28 +61,51 @@ for (i=0; i < mySlidesPictures.length; i++) {
   "<img class=\"mySlides\" src=\"" + mySlidesPictures[i] + "\"style=\"width:100%\">";
 }
 
-// var slideIndex = 1;
+var slideIndex = 1;
 
-// showDivs(slideIndex);
+showDivs(slideIndex);
 
-// function plusDivs(n) {
-//   showDivs(slideIndex += n);
-// }
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
 
-// function showDivs(n) {
-//   var i;
-//   var x = document.getElementsByClassName("mySlides");
-//   if (n > x.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = x.length}
-//   for (i = 0; i < x.length; i++) {
-//      x[i].style.display = "none";
-//   }
-//   x[slideIndex-1].style.display = "block";
-// }
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
 
-// var text = "";
-// var i;
-// for (i = 0; i < projects.length; i++) {
-//     text += projects[i].name + "<br>";
-// }
+var text = "";
+var i;
+for (i = 0; i < projects.length; i++) {
+    text += projects[i].name + "<br>";
+}
 // document.getElementById("test1").innerHTML = text;
+
+
+//tip calculator
+
+function calculateTip(amount, tip){
+
+  let percent = (tip/100); //0.05
+
+  let tipAmount = amount * percent;
+  let totalAmount = amount + tipAmount;
+if(tip<=5){
+  console.log('you could better than' + tipAmount); 
+} else if(tip>=20){
+  console.log('oh that tip is very generous');
+} else{
+  console.log('that tip is alright I assume'); 
+}
+ 
+
+}
+
+calculateTip(100,15);
+
