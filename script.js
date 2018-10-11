@@ -135,9 +135,10 @@ function addItem(arr){
   
 }
 
+checking the value
 function checkDuplicate(arr,item){
   let exists = false;
-  let index = arr.indexOf(item);
+  let index = arr.indexOf(item);//this returns -1 if it doesn't exists 
   if(index!=-1){
     exists = false;
   }
@@ -146,6 +147,22 @@ function checkDuplicate(arr,item){
   }
   return exists;
 }
+
+//ANOTHER OPTION
+
+// function addItem(arr){
+//   let answer = prompt("what would you like to add to your todo list?");
+//   let correct = answer.toLowerCase().trim();
+
+//   let index = arr.indexOf(correct);
+
+//   if(index === -1){
+//     arr.push(answer); 
+//   }
+//   else {
+//     alert('item already exists')
+//   }
+// }
 
 addItem(toDOList);
 addItem(toDOList);
