@@ -113,11 +113,42 @@ calculateTip(100,15);
 
 let toDOList = [];
 
-function addItem(arr, item){
-  arr.push(item);
+// function addItem(arr, item){
+//   arr.push(item);
+// }
+
+// addItem(toDOList,"walk the dog");
+// addItem(toDOList,"make coffee");
+
+// console.log(toDOList);
+
+//taking the user input and putting it into lowercase and trim from empty space etc
+function addItem(arr){
+  let answer = prompt("what would you like to add to your todo list?");
+  let correct = answer.toLowerCase().trim();
+  if(checkDuplicate(arr, correct)){
+    arr.push(answer); 
+  }
+  else {
+    alert('item already exists')
+  }
+  
 }
 
-addItem(toDOList,"walk the dog");
-addItem(toDOList,"make coffee");
+function checkDuplicate(arr,item){
+  let exists = false;
+  let index = arr.indexOf(item);
+  if(index!=-1){
+    exists = false;
+  }
+  else {
+    exists = true;
+  }
+  return exists;
+}
+
+addItem(toDOList);
+addItem(toDOList);
+addItem(toDOList);
 
 console.log(toDOList);
