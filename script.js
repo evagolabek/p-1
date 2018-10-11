@@ -109,3 +109,15 @@ if(tip<=5){
 
 calculateTip(100,15);
 
+//todo
+
+let toDOList = [];
+
+function addItem(arr, item){
+  arr.push(item);
+}
+
+addItem(toDOList,"walk the dog");
+addItem(toDOList,"make coffee");
+
+console.log(toDOList);
