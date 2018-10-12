@@ -179,38 +179,71 @@ function checkDuplicate(arr,item){
 
 //proper remove item function
 
-function removeItem(list){
-  let answer = prompt('Which item would you like to remove from your todo list?')
-  let correct = answer.trim().toLowerCase();
+// function removeItem(list){
+//   let answer = prompt('Which item would you like to remove from your todo list?')
+//   let correct = answer.trim().toLowerCase();
 
-  let index = list.indexOf(correct);
-  if(!checkDuplicate(list, correct)){
-     let removedItem = list.splice(index,1);
-     console.log(removedItem);
-     alert(`You removed "${removedItem}"`);
-  }
-  else{
-    console.log('no such value exists');
-  }
-}
+//   let index = list.indexOf(correct);
+//   if(!checkDuplicate(list, correct)){
+//      let removedItem = list.splice(index,1);
+//      console.log(removedItem);
+//      alert(`You removed "${removedItem}"`);
+//   }
+//   else{
+//     console.log('no such value exists');
+//   }
+// }
 
 //FUNCTION SHOWITEMS
 
-function showItems(list){
-  let listValues = 'Your list items are: ';
-  for(let i=0;i<list.length;i++){
-    listValues += `" List item nr${i+1} : ${list[i]}"`
+// function showItems(list){
+//   let listValues = 'Your list items are: ';
+//   for(let i=0;i<list.length;i++){
+//     listValues += `" List item nr${i+1} : ${list[i]}"`
+//   }
+//   alert(listValues);
+// }
+
+
+// addItem(toDOList);
+// addItem(toDOList);
+// addItem(toDOList);
+
+// removeItem(toDOList);
+// removeItem(toDOList);
+// removeItem(toDOList);
+
+// console.log(toDOList);
+
+//converting strings to array
+
+// let text = 'some short text';
+// let arrText = text.split('');
+// let secondText = arrText.join('')//here you can put how you want to join them
+
+// console.log(arrText);
+// console.log(secondText);
+
+// function reversString(text){
+//   let result = text.split('').reverse().join();
+//   console.log(result);
+// }
+
+// reverseString("hello world")
+
+function findTheLongestword(pants){
+  let result = pants.split('');
+  console.log(result);
+
+  let longestWord = '';
+  for(let i = 0; i<result.length;i++){
+    if(result[i].length>longestWord.length){
+      longestWord = result[i];
+    }
   }
-  alert(listValues);
+
+  console.log(`The longest word is: ${longestWord}`);
+  console.log(longestWord.length);
 }
 
-
-addItem(toDOList);
-addItem(toDOList);
-addItem(toDOList);
-
-removeItem(toDOList);
-removeItem(toDOList);
-removeItem(toDOList);
-
-console.log(toDOList);
+findTheLongestword("thkjhskdnhis ifs ffl l something randomjjkdhfdjfhd");
