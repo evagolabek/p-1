@@ -128,6 +128,7 @@ function addItem(arr){
   let correct = answer.toLowerCase().trim();
   if(checkDuplicate(arr, correct)){
     arr.push(answer); 
+    showItems(toDOList);
   }
   else {
     alert('item already exists')
@@ -192,6 +193,17 @@ function removeItem(list){
     console.log('no such value exists');
   }
 }
+
+//FUNCTION SHOWITEMS
+
+function showItems(list){
+  let listValues = 'Your list items are: ';
+  for(let i=0;i<list.length;i++){
+    listValues += `" List item nr${i+1} : ${list[i]}"`
+  }
+  alert(listValues);
+}
+
 
 addItem(toDOList);
 addItem(toDOList);
