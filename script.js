@@ -135,17 +135,17 @@ function addItem(arr){
   
 }
 
-checking the value
+//CHECKING IF ITS UNIQUE
 function checkDuplicate(arr,item){
-  let exists = false;
+  let isUnique = false;
   let index = arr.indexOf(item);//this returns -1 if it doesn't exists 
   if(index!=-1){
-    exists = false;
+    isUnique = false;
   }
   else {
-    exists = true;
+    isUnique = true;
   }
-  return exists;
+  return isUnique;
 }
 
 //ANOTHER OPTION
@@ -164,8 +164,41 @@ function checkDuplicate(arr,item){
 //   }
 // }
 
+// REMOVE ITEMS, simple version
+
+// function removeItem(list){
+//   if(list.length>0){
+//     console.log(`You deleted "${list[list.lenght-1]}" from the list `);
+//     list.pop()
+//   }
+//   else {
+//     console.log('list does not have any more items to delete')
+//   }
+// }
+
+//proper remove item function
+
+function removeItem(list){
+  let answer = prompt('Which item would you like to remove from your todo list?')
+  let correct = answer.trim().toLowerCase();
+
+  let index = list.indexOf(correct);
+  if(!checkDuplicate(list, correct)){
+     let removedItem = list.splice(index,1);
+     console.log(removedItem);
+     alert(`You removed "${removedItem}"`);
+  }
+  else{
+    console.log('no such value exists');
+  }
+}
+
 addItem(toDOList);
 addItem(toDOList);
 addItem(toDOList);
+
+removeItem(toDOList);
+removeItem(toDOList);
+removeItem(toDOList);
 
 console.log(toDOList);
